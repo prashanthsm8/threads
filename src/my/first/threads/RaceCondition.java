@@ -34,7 +34,7 @@ class BankAccount implements Runnable{
 		
 	}
 	
-	private void makeWithdraw(int amount) {
+	private synchronized void makeWithdraw(int amount) {
 		if(balance>amount)
 		{
 			System.out.println(Thread.currentThread().getName()+"is about to withdraw");
